@@ -1,3 +1,22 @@
+// Definir un array de objetos
+const productos = [
+    { nombre: "Producto 1", precio: 20 },
+    { nombre: "Producto 2", precio: 30 },
+    { nombre: "Producto 3", precio: 40 },
+    { nombre: "Producto 4", precio: 50 },
+    { nombre: "Producto 5", precio: 60 }
+];
+
+// Función para buscar un producto por nombre
+function buscarProducto(nombre) {
+    return productos.find(producto => producto.nombre === nombre);
+}
+
+// Función para filtrar productos por precio
+function filtrarPorPrecio(minimo, maximo) {
+    return productos.filter(producto => producto.precio >= minimo && producto.precio <= maximo);
+}
+
 // Capturar entradas mediante prompt()
 function capturarEntrada(mensaje) {
     return prompt(mensaje);
